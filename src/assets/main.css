@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Khmer:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #app {
+    @apply min-h-screen bg-[#fffdf7] text-slate-900;
+  }
+
+  html[lang='zh-CN'] body {
+    font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 15% 5%, rgba(245, 158, 11, 0.1), transparent 28%),
+      radial-gradient(circle at 90% 0%, rgba(251, 191, 36, 0.12), transparent 30%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 md:px-6;
+  }
+
+  .glass-card {
+    @apply border border-amber-100 bg-white shadow-soft;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl;
+  }
+
+  .foodbuzz-chip {
+    @apply inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .motion-cursor-layer {
+      display: none !important;
+    }
+  }
+}
+
+.admin-dark {
+  background: #020617 !important;
+  color: #e2e8f0 !important;
+}
+
+.admin-dark .bg-white {
+  background-color: #0f172a !important;
+}
+
+.admin-dark .bg-slate-100,
+.admin-dark .bg-slate-50 {
+  background-color: #1e293b !important;
+}
+
+.admin-dark .border-slate-100,
+.admin-dark .border-slate-200,
+.admin-dark .border-teal-100,
+.admin-dark .border-rose-100,
+.admin-dark .border-amber-100 {
+  border-color: #334155 !important;
+}
+
+.admin-dark .text-slate-950,
+.admin-dark .text-slate-900,
+.admin-dark .text-slate-800,
+.admin-dark .text-slate-700 {
+  color: #f8fafc !important;
+}
+
+.admin-dark .text-slate-600,
+.admin-dark .text-slate-500,
+.admin-dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.admin-dark input,
+.admin-dark select,
+.admin-dark textarea {
+  background-color: #020617 !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.admin-dark input::placeholder,
+.admin-dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+.admin-dark .shadow-sm,
+.admin-dark .shadow-soft,
+.admin-dark .shadow-2xl {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28) !important;
+}
